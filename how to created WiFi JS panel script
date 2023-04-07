@@ -1,0 +1,53 @@
+Instructions on how to created channelDataType, channelWidthDataType and transmitPowerDataType for a WiFi JS panel script
+
+var channelDataType = {
+  type: "ENUM",
+  choice: [
+    { systemName: "NEW_SYSTEM_NAME_1", friendlyName: "NEW_FRIENDLY_NAME_1" },
+    { systemName: "NEW_SYSTEM_NAME_2", friendlyName: "NEW_FRIENDLY_NAME_2" },
+    // ... add more choices as needed
+  ],
+};
+var channelWidthDataType = {
+  type: "ENUM",
+  choice: [
+    { systemName: "NEW_SYSTEM_NAME_1", friendlyName: "NEW_FRIENDLY_NAME_1" },
+    { systemName: "NEW_SYSTEM_NAME_2", friendlyName: "NEW_FRIENDLY_NAME_2" },
+    // ... add more choices as needed
+  ],
+};
+var transmitPowerDataType = {
+  type: "ENUM",
+  choice: [
+    { systemName: "NEW_SYSTEM_NAME_1", friendlyName: "NEW_FRIENDLY_NAME_1" },
+    { systemName: "NEW_SYSTEM_NAME_2", friendlyName: "NEW_FRIENDLY_NAME_2" },
+    // ... add more choices as needed
+  ],
+};
+Replace the NEW_SYSTEM_NAME_X and NEW_FRIENDLY_NAME_X placeholders with the values for the respective var channelDataType, channelWidthDataType and transmitPowerDataType are obtained from the device’s xml device model.
+
+For example: 
+For DeviceModel name="D-LINK_BC0F9A_NIUFibra"
+
+You can find the channelDataType on its xml devicemodel
+
+var channelDataType = {
+  type: "ENUM", 
+  choice:[
+    { systemName: "0", friendlyName: "auto" },
+    { systemName: "1", friendlyName: "1" },
+    { systemName: "2", friendlyName: "2" },
+    { systemName: "3", friendlyName: "3" },
+    { systemName: "4", friendlyName: "4" },
+    { systemName: "5", friendlyName: "5" },
+    { systemName: "6", friendlyName: "6" },
+    { systemName: "7", friendlyName: "7" },
+    { systemName: "8", friendlyName: "8" },
+    { systemName: "9", friendlyName: "9" },
+    { systemName: "10", friendlyName: "10" },
+    { systemName: "11", friendlyName: "11" }
+  ]
+};
+
+You can not find channelWidthDataType on DeviceModel name="D-LINK_BC0F9A_NIUFibra" therefore no channelWidthDataType should be created.
+You can not find transmitPowerDataType on DeviceModel name="D-LINK_BC0F9A_NIUFibra" therefore no transmitPowerDataType should be created.
